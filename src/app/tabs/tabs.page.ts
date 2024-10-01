@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DetailsPage} from "../pages/details/details.page";
 
 @Component({
   selector: 'app-tabs',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
 export class TabsPage {
 
   constructor() {}
+
 
 }
