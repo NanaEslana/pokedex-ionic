@@ -9,7 +9,19 @@
 <ion-content>
   <ion-row>
     <ion-col size="6">
-      <img src="assets/pokemon-1.png"  alt=""/>
+      <img [src]="pokemon()?.image"  alt=""/>
     </ion-col>
+    <ion-col size="6">
+      <ion-title class="ion-no-padding">{{pokemon().name}}</ion-title>
+    </ion-col>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>{{ pokemon().name }}</ion-card-subtitle>
+        <ion-chip color="danger">{{ pokemon().type }}</ion-chip>
+      </ion-card-header>
+      <ion-card-content>
+        {{ pokemon().description}}
+      </ion-card-content>
+    </ion-card>
   </ion-row>
 </ion-content>
