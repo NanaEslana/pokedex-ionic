@@ -1,12 +1,12 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar color="danger" >
-      <ion-title size="default" >Pokemons</ion-title>
+      <ion-title size="default">Pokemons</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-searchbar animated="true" placeholder="Qual Pokemon?"></ion-searchbar>
     <ion-row class="ion-no-padding">
-      @for (pokemon of pokemons; track pokemon.name) {
+      @for (pokemon of pokemons(); track pokemon.name) {
       <ion-col size="4">
           <ion-card (click)="openDetails(pokemon)">
             <ion-card-header >
@@ -19,6 +19,9 @@
       </ion-col>
       }
     </ion-row>
-
-
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="danger" (click)="openModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

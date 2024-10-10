@@ -19,4 +19,9 @@ export class DetailsPage implements OnInit {
     }
   }
 
+  percentage(value: number ){
+    const valorTotal = 15;
+    return value / valorTotal;
+  }
+
 }

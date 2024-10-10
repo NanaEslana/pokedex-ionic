@@ -21,4 +21,20 @@
   <h5> {{pokemon().type}}</h5>
   <h4> Habilidades: </h4>
   <h5>{{pokemon().ability}}</h5>
+  <h4> Estatísticas </h4>
+  <ion-list>
+    <ion-item>
+      <ion-badge slot="start">Ataque</ion-badge>
+      <ion-progress-bar [value]="percentage(4)"></ion-progress-bar>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">Defesa</ion-badge>
+      <ion-progress-bar [value]="percentage(6)"></ion-progress-bar>
+    </ion-item>
+    <ion-item>
+      <ion-badge slot="start">Velocidade</ion-badge>
+      <ion-progress-bar [value]="percentage(8)"></ion-progress-bar>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

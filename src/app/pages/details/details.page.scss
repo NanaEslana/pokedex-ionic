@@ -1,8 +1,18 @@
-h4 {
-  font-family: fantasy;
-}
+:host {
+  --backdrop: #f4f4f4;
+  --ion-background-color: #f4f4f4;
 
-h5 {
-  text-align: justify;
-}
+  ion-modal {
+    --backdrop: #f4f4f4;
+    --ion-background-color: #f4f4f4;
+  }
 
+  h4 {
+    font-family: fantasy;
+  }
+
+  h5 {
+    text-align: justify;
+  }
+
+}

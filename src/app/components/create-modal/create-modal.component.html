@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="danger" >
+    <ion-title size="default">Novo Pokemon</ion-title>
+    <ion-buttons (click)="cancel()" slot="start">
+      <ion-icon size="large" name="arrow-undo-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <img src="assets/cadastro%20img.png" alt="">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Seu Pokemon</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="form">
+        <ion-input formControlName="name" label="Nome Pokemon:" label-placement="floating" fill="outline"></ion-input>
+        <br/>
+        <ion-input label="Descrição:" label-placement="floating" fill="outline"></ion-input>
+        <br/>
+        <ion-select aria-label="fruit" placeholder="Tipo(s)" [multiple]="true">
+          <ion-select-option value="Electric">Electric</ion-select-option>
+          <ion-select-option value="Fogo">Fogo</ion-select-option>
+          <ion-select-option value="Planta">Planta</ion-select-option>
+          <ion-select-option value="Água">Água</ion-select-option>
+          <ion-select-option value="Normal">Normal</ion-select-option>
+        </ion-select>
+        <br/>
+        <ion-input label="Habilidades:" label-placement="floating" fill="outline"></ion-input>
+        <br/>
+        <ion-button (click)="confirm()" color="danger" expand="block">Adicionar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
