@@ -14,11 +14,25 @@
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="form">
-        <ion-input formControlName="name" label="Nome Pokemon:" label-placement="floating" fill="outline"></ion-input>
+        <ion-input
+          type="email"
+          fill="solid"
+          label="Nome Pokemon:"
+          labelPlacement="floating"
+          helperText="Escolha o nome do pokemon"
+          formControlName="name"
+        ></ion-input>
         <br/>
-        <ion-input label="Descrição:" label-placement="floating" fill="outline"></ion-input>
+        <ion-input
+          type="description"
+          fill="solid"
+          label="Descrição:"
+          labelPlacement="floating"
+          helperText="Descreva seu pokemon"
+          formControlName="description"
+        ></ion-input>
         <br/>
-        <ion-select aria-label="fruit" placeholder="Tipo(s)" [multiple]="true">
+        <ion-select formControlName="type" aria-label="fruit" label="Tipo de Pokemon" placeholder="Tipo(s)" [multiple]="true">
           <ion-select-option value="Electric">Electric</ion-select-option>
           <ion-select-option value="Fogo">Fogo</ion-select-option>
           <ion-select-option value="Planta">Planta</ion-select-option>
@@ -26,7 +40,14 @@
           <ion-select-option value="Normal">Normal</ion-select-option>
         </ion-select>
         <br/>
-        <ion-input label="Habilidades:" label-placement="floating" fill="outline"></ion-input>
+        <ion-input
+          type="ability"
+          fill="solid"
+          label="Habilidades:"
+          labelPlacement="floating"
+          helperText="Qual sua habilidade"
+          formControlName="ability"
+        ></ion-input>
         <br/>
         <ion-button (click)="confirm()" color="danger" expand="block">Adicionar</ion-button>
       </form>
