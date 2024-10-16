@@ -20,6 +20,7 @@
           label="Nome Pokemon:"
           labelPlacement="floating"
           helperText="Escolha o nome do pokemon"
+          errorText="Preencha corretamente!"
           formControlName="name"
         ></ion-input>
         <br/>
@@ -29,6 +30,7 @@
           label="Descrição:"
           labelPlacement="floating"
           helperText="Descreva seu pokemon"
+          errorText="Preencha corretamente!"
           formControlName="description"
         ></ion-input>
         <br/>
@@ -45,11 +47,12 @@
           fill="solid"
           label="Habilidades:"
           labelPlacement="floating"
-          helperText="Qual sua habilidade"
+          helperText="Sua habilidade"
+          errorText="Preencha corretamente!"
           formControlName="ability"
         ></ion-input>
         <br/>
-        <ion-button (click)="confirm()" color="danger" expand="block">Adicionar</ion-button>
+        <ion-button (click)="presentAlert()" color="danger" expand="block">Adicionar</ion-button>
       </form>
     </ion-card-content>
   </ion-card>

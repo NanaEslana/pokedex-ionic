@@ -20,7 +20,24 @@ export class Tab1Page {
       image: 'assets/pokemon-1.png',
       type: 'Erva e Veneno',
       description: 'Por algum tempo após o nascimento, ele usa os nutrientes contidos na semente em suas costas para crescer..',
-      ability: ' O bulbo pode absorver a luz solar, permitindo Bulbasaur para restaurar a saúde com Síntese ou disparar um poderoso Raio Solar.'
+      ability: ' O bulbo pode absorver a luz solar, permitindo Bulbasaur para restaurar a saúde com Síntese ou disparar um poderoso Raio Solar.',
+      evolutions: {
+        start: {
+          image: 'assets/pokemon-1.png',
+          name: 'Bulbasaur',
+          description: 'Por algum tempo após o nascimento, ele usa os nutrientes contidos na semente em suas costas para crescer.'
+        } ,
+        second: {
+          image:  'assets/evolucao/pokemon-1.2.png',
+          name: 'Ivysaur',
+          description: 'Quanto mais luz solar Ivysaur recebe, mais força brota dentro dele, permitindo que o broto em suas costas cresça mais.'
+        },
+        third: {
+          image: 'assets/evolucao/pokemon-1.3.png',
+          name: 'Venusaur',
+          description: 'Enquanto se aquece no sol, ele pode converter a luz em energia. Como resultado, ele é mais potente no verão.'
+        }
+      }
     },
     {
       name: 'Charmander',

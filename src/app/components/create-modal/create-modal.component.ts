@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ModalController} from "@ionic/angular";
+import {AlertController, ModalController} from "@ionic/angular";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
@@ -18,7 +18,7 @@ export class CreateModalComponent {
       validators: [Validators.required],
       nonNullable: true
     }),
-    image: new FormControl('', {
+    image: new FormControl('assets/pokemon-2.png', {
       validators: [Validators.required],
       nonNullable: true
     }),
@@ -32,13 +32,32 @@ export class CreateModalComponent {
     })
   })
 
-  constructor(private modalCtrl: ModalController) {}
+  constructor(private modalCtrl: ModalController, private alertController: AlertController) {}
 
   cancel() {
     return this.modalCtrl.dismiss(null, 'cancel');
   }
 
-  confirm() {
-    return this.modalCtrl.dismiss(this.form.getRawValue(), 'confirm');
+  async presentAlert() {
+    if (this.form.valid) {
+      const alert = await this.alertController.create({
+        header: 'Sucesso!',
+        subHeader: 'Pokémon Adicionado',
+        message: 'O Pokémon foi adicionado e está na sua lista!',
+        buttons: ['OK'],
+      });
+      await alert.present();
+      return this.modalCtrl.dismiss(this.form.getRawValue(), 'confirm');
+    } else {
+      const alert = await this.alertController.create({
+        header: 'Aviso!',
+        subHeader: 'Campos obrigatórios',
+        message: 'Por favor, preencha todos os campos obrigatórios para adicionar um novo Pokémon.',
+        buttons: ['OK'],
+      });
+      await alert.present();
+      this.form.markAllAsTouched();
+      return false;
+    }
   }
 }

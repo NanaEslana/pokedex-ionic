@@ -1,5 +1,8 @@
 import {Component, OnInit, signal} from '@angular/core';
 import {Router} from "@angular/router";
+import { register } from 'swiper/element/bundle';
+
+register();
 
 @Component({
   selector: 'app-details',
@@ -17,11 +20,6 @@ export class DetailsPage implements OnInit {
     if (currentNavigation && currentNavigation.extras.state) {
       this.pokemon.set(currentNavigation.extras.state['pokemon'])
     }
-  }
-
-  percentage(value: number ){
-    const valorTotal = 15;
-    return value / valorTotal;
   }
 
 }
