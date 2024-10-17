@@ -12,6 +12,23 @@ register();
 export class DetailsPage implements OnInit {
   pokemon = signal<any|undefined>(undefined)
 
+  public actionSheetButtons = [
+    {
+      text: 'Delete',
+      role: 'destructive',
+      data: {
+        action: 'delete',
+      },
+    },
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      data: {
+        action: 'cancel',
+      },
+    },
+  ];
+
   constructor(private readonly router: Router) { }
 
   ngOnInit() {

@@ -29,6 +29,9 @@ export class CreateModalComponent {
     description: new FormControl('', {
       validators: [Validators.required],
       nonNullable: true
+    }),
+    evolutions: new FormControl('', {
+      nonNullable: true
     })
   })
 

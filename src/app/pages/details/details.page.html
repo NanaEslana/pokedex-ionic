@@ -3,6 +3,15 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end" >
+      <ion-icon id="open-action-sheet" name="trash-outline"></ion-icon>
+      <ion-action-sheet
+        trigger="open-action-sheet"
+        header="Excluir Pokémon"
+        subHeader="Tem certeza de que deseja excluir este Pokémon? Esta ação não poderá ser desfeita."
+        [buttons]="actionSheetButtons"
+      ></ion-action-sheet>
+    </ion-buttons>
     <ion-title size="default">Details</ion-title>
   </ion-toolbar>
 </ion-header>
