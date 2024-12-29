@@ -1,27 +1,42 @@
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar color="danger" >
-      <ion-title size="default">Pokemons</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-searchbar animated="true" placeholder="Qual Pokemon?"></ion-searchbar>
-    <ion-row class="ion-no-padding">
-      @for (pokemon of pokemons(); track pokemon.name) {
-      <ion-col size="4">
-          <ion-card (click)="openDetails(pokemon)">
-            <ion-card-header >
-              <ion-card-title>
-                {{pokemon.name}}
-              </ion-card-title>
-              <ion-img [src]="pokemon.image"></ion-img>
-            </ion-card-header>
-          </ion-card>
-      </ion-col>
-      }
-    </ion-row>
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
-    <ion-fab-button color="danger" (click)="openModal()">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header collapse="condense">
+      <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title size="default">Pokemons</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-searchbar animated="true" placeholder="Qual Pokemon?"></ion-searchbar>
+      <ion-row class="ion-no-padding">
+        @for (pokemon of pokemons(); track pokemon.name) {
+          <ion-col size="4">
+            <ion-card (click)="openDetails(pokemon)">
+              <ion-card-header >
+                <ion-card-title>
+                  {{pokemon.name}}
+                </ion-card-title>
+                <ion-img [src]="pokemon.image"></ion-img>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        }
+      </ion-row>
+      <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+        <ion-fab-button color="danger" (click)="openModal()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-content>
+  </div>
 </ion-content>

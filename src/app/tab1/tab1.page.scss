@@ -1,4 +1,5 @@
 :host {
+
   ion-card {
     margin: 0.5rem;
   }
@@ -12,6 +13,19 @@
     text-align: center;
     font-size: 0.9rem;
     font-family: "Century Gothic", serif;
+  }
+
+  ion-menu::part(backdrop) {
+    background-color: rgb(7 2 7);
+  }
+
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+    box-shadow: 4px 0 16px rgba(255, 0, 255, 0.18);
+  }
+
+  ion-fab {
+    margin-bottom: 3rem;
   }
 
 }

@@ -32,39 +32,18 @@
   <h5>{{pokemon().ability}}</h5>
 
   <h4> Evoluções: </h4>
-  <swiper-container slides-per-view="1" autoplay=true>
+  <swiper-container slides-per-view="3" autoplay=true>
     <swiper-slide>
       <img [src]="pokemon().evolutions.start.image" alt="">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>{{pokemon().evolutions.start.name}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          {{pokemon().evolutions.start.description}}
-        </ion-card-content>
-      </ion-card>
+      <ion-icon size="large" name="arrow-forward-outline"></ion-icon>
     </swiper-slide>
     <swiper-slide>
       <img [src]="pokemon().evolutions.second.image" alt="">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>{{pokemon().evolutions.second.name}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          {{pokemon().evolutions.second.description}}
-        </ion-card-content>
-      </ion-card>
+      <ion-icon size="large"  name="arrow-forward-outline"></ion-icon>
     </swiper-slide>
     <swiper-slide>
       <img [src]="pokemon().evolutions.third.image" alt="">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>{{pokemon().evolutions.third.name}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          {{pokemon().evolutions.third.description}}
-        </ion-card-content>
-      </ion-card>
+      <ion-icon size="large"  name="code-slash-outline"></ion-icon>
     </swiper-slide>
   </swiper-container>
 

@@ -6,6 +6,12 @@
     --backdrop: #f4f4f4;
     --ion-background-color: #f4f4f4;
   }
+  swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   h4 {
     font-family: fantasy;
